@@ -52,7 +52,7 @@ snippet el
 	}
 # Ternary conditional
 snippet t
-	${1:/* condition */} ? ${2:a} : ${3:b}
+	(${1:/* condition */}) ? ${2:a} : ${3:b}
 # Do While Loop
 snippet do
 	do {
@@ -65,12 +65,12 @@ snippet wh
 	}
 # For Loop
 snippet for
-	for (${2:i} = 0; $2 < ${1:count}; $2${3:++}) {
+	for (${1:i} = 0; $1 < ${2:count}; ${3:++}$1) {
 		${4:/* code */}
 	}
 # Custom For Loop
 snippet forr
-	for (${1:i} = ${2:0}; ${3:$1 < 10}; $1${4:++}) {
+	for (${1:i} = ${2:0}; ${3:$1 < 10}; ${4:++}$1) {
 		${5:/* code */}
 	}
 # Function
