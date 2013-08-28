@@ -28,10 +28,10 @@ snippet cl
 	private:
 		${3:/* data */}
 	};
-snippet fori
-	for (int ${1:i} = 0; $1 < ${2:count}; ${3:++}$1) {
-		${4:/* code */}
-	}
+#snippet fori
+#	for (int ${1:i} = 0; $1 < ${2:count}; ${3:++}$1) {
+#		${4:/* code */}
+#	}
 snippet uva
 	#include <iostream>
 
@@ -43,3 +43,14 @@ snippet uva
 		${1}
 		return 0;
 	}
+# for loop with iterators
+snippet fori
+	for (${1:type_t}::iterator ${2:it} = ${3:collection}.begin(), ${4:end} = $3.end(); $2 != $4; $2++) {
+		${5:/* code */}
+	}
+# for loop with const iterators
+snippet forci
+	for (${1:type_t}::const_iterator ${2:it} = ${3:collection}.begin(), ${4:end} = $3.end(); $2 != $4; $2++) {
+		${5:/* code */}
+	}
+
